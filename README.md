@@ -1,16 +1,13 @@
-# localization_practice
+# Flutter_Project: Localization
 
-A new Flutter project.
+Practicing how to use localization in a project.
 
-## Getting Started
+## 1. Getting Started (Using CodeTour)
 
-This project is a starting point for a Flutter application.
+a. Download Codetour in VS Code.
+![2022-05-14_12h25_41](https://user-images.githubusercontent.com/54527045/168412169-209c4392-04df-401e-af37-1382be7e32e9.png)
 
-A few resources to get you started if this is your first Flutter project:
+b. open CodeTour in explorer
+![2022-05-14_12h33_39](https://user-images.githubusercontent.com/54527045/168412218-aa5b836b-a4ba-4fcb-95c5-6929066a010a.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+c. Click "Open Tour File"
