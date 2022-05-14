@@ -7,6 +7,12 @@
       "description": "tambah package localization di pubspec.yaml",
       "line": 33,
       "title": "add flutter_localization packages"
+    },
+    {
+      "file": "pubspec.yaml",
+      "description": "tambah generate supaya sistem membuat file otomatis untuk localozation. ",
+      "line": 64,
+      "title": "add generate"
     }
   ]
 }
