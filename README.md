@@ -75,9 +75,9 @@ app_en.arb
 
 | app_en.arb | app_id.arb |
 |---|---|
-| {<br> &emsp; "helloWorld": "Hello Word",   <br>} | {<br> &emsp; "helloWorld": "Halo Dunia",   <br>} |
+| {<br> &emsp; "helloWorld": "Hello Word"   <br>} | {<br> &emsp; "helloWorld": "Halo Dunia"   <br>} |
 
-> __Note__ : [In Here](https://docs.flutter.dev/go/i18n-user-guide), developer kan added description for the wording. Just add in one file wherever it is.
+> __Note__ : [In Here](https://docs.flutter.dev/go/i18n-user-guide), developer kan added description for the wording. Just add in one file wherever it is. The description doesn't be show in application.
 ```arb
 {
     "helloWorld": "Hello World!",
@@ -85,4 +85,44 @@ app_en.arb
       "description": "The conventional newborn programmer greeting"
     }
 }
+```
+
+e. Change `MyApp` widget in `main.dart` to following code : 
+
+```dart
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: 'Localizations Sample App',
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', ''), // English, no country code
+        Locale('id', ''),, // Indonesia, no country code
+      ],
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+```
+
+then running the project so that the generate code will appear:
+
+![2022-05-14_21h19_53](https://user-images.githubusercontent.com/54527045/168429715-fa10e70d-7086-4205-ada3-0a842f85a5a8.png)
+
+
+f. call localization with folowing code :
+```dart
+final _wording = AppLocalization.of(context);
+
+_wording.helloWorld
 ```

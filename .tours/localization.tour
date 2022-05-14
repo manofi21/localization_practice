@@ -32,9 +32,27 @@
     },
     {
       "file": "assets/l10n/app_en.arb",
-      "description": "tambah wording di app_en (untuk bahasa inggris) dan app_id (untuk indonesia). \r\n\r\nNote: Pastikan key untuk wording di app_en dan app_id sama. Jika ada 1 key yang tidak memilik pasangan dari ke-2 file, akan di masukkan ke untranslated_file.txt. ",
+      "description": "tambah wording di app_en (untuk bahasa inggris) dan app_id (untuk indonesia). \r\n\r\nNote: Pastikan key untuk wording di app_en dan app_id sama. Jika ada 1 key yang tidak memilik pasangan dari ke-2 file, akan di masukkan ke untranslated_file.txt. \r\n\r\nNote: The description doesn't be show in application.",
       "line": 1,
       "title": "create app_en.arb and app_id.arb for add wording"
+    },
+    {
+      "file": "lib/main.dart",
+      "description": "update MyApp untuk implement localization.\r\n\r\n__Old Code :__\r\n```dart\r\nclass MyApp extends StatelessWidget {\r\n  const MyApp({Key? key}) : super(key: key);\r\n\r\n  // This widget is the root of your application.\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return MaterialApp(\r\n      title: 'Flutter Demo',\r\n      theme: ThemeData(\r\n        primarySwatch: Colors.blue,\r\n      ),\r\n      home: const MyHomePage(title: 'Flutter Demo Home Page'),\r\n    );\r\n  }\r\n}\r\n```\r\n\r\n__New Code :__\r\n```dart\r\nimport 'package:flutter_localizations/flutter_localizations.dart';\r\n\r\nclass MyApp extends StatelessWidget {\r\n  const MyApp({Key? key}) : super(key: key);\r\n\r\n  // This widget is the root of your application.\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return const MaterialApp(\r\n      title: 'Localizations Sample App',\r\n      localizationsDelegates: [\r\n        GlobalMaterialLocalizations.delegate,\r\n        GlobalWidgetsLocalizations.delegate,\r\n        GlobalCupertinoLocalizations.delegate,\r\n      ],\r\n      supportedLocales: [\r\n        Locale('en', ''), // English, no country code\r\n        Locale('id', ''),, // Indonesia, no country code\r\n      ],\r\n      home: MyHomePage(title: 'Flutter Demo Home Page'),\r\n    );\r\n  }\r\n}\r\n```\r\n\r\nAnd run for generate localization files.",
+      "line": 7,
+      "title": "implement using localization"
+    },
+    {
+      "file": "lib/main.dart",
+      "description": "Tambahkan code `AppLocalizations.delegate` setelah aplikasi selesai di jalankan dan generated code(di .dart_tool/flutter_gen/app_localizations.dart) muncul.",
+      "line": 18,
+      "title": "add AppLocalizations.delegate,"
+    },
+    {
+      "file": "lib/main.dart",
+      "description": "panggil AppLocalization untuk memanggil wording yang sudah di \"Lokalisasikan\".\r\n\r\ncontoh :\r\n```dart\r\nfinal _wording = AppLocalization.of(context);\r\n\r\n_wording.helloWorld\r\n```",
+      "line": 70,
+      "title": "call the wording"
     }
   ]
 }
