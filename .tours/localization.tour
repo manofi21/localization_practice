@@ -1,0 +1,12 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "localization",
+  "steps": [
+    {
+      "file": "pubspec.yaml",
+      "description": "tambah package localization di pubspec.yaml",
+      "line": 33,
+      "title": "add flutter_localization packages"
+    }
+  ]
+}
