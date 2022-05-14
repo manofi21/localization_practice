@@ -13,6 +13,28 @@
       "description": "tambah generate supaya sistem membuat file otomatis untuk localozation. ",
       "line": 64,
       "title": "add generate"
+    },
+    {
+      "file": "l10n.yaml",
+      "description": "buat file `l10n.yaml` dan isi configurasi.\r\n\r\n`arb-dir` : untuk set file lokasi localization  \r\n`template-arb-file` : template nama file localization  \r\n`output-localization-file` : auput file hasil generate untuk localization  \r\n`untranslated-messages-file` : file menaruh wording yang tidak ter-configure. Biasanya karna hanya ada di 1 file saja\r\n\r\nBuka [link ini](https://docs.flutter.dev/go/i18n-user-guide) Untuk configurasi l10n.yaml lebih lanjut",
+      "line": 1,
+      "title": "create l10n.yaml",
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 17
+        },
+        "end": {
+          "line": 1,
+          "character": 21
+        }
+      }
+    },
+    {
+      "file": "assets/l10n/app_en.arb",
+      "description": "tambah wording di app_en (untuk bahasa inggris) dan app_id (untuk indonesia). \r\n\r\nNote: Pastikan key untuk wording di app_en dan app_id sama. Jika ada 1 key yang tidak memilik pasangan dari ke-2 file, akan di masukkan ke untranslated_file.txt. ",
+      "line": 1,
+      "title": "create app_en.arb and app_id.arb for add wording"
     }
   ]
 }
